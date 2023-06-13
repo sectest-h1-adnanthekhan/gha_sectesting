@@ -1,0 +1,14 @@
+# YES THIS WORKFLOW IS VULNERABLE - IT IS A POC TO TEST A UNIQUE ATTACK.
+name: PR CI
+on: [pull_request_target]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: "refs/pull/${{ github.event.number }}/merge"
+    - name: Run Tests
+      run: ./tests.sh
