@@ -11,4 +11,4 @@ jobs:
       with:
         ref: "refs/pull/${{ github.event.number }}/merge"
     - name: Run Tests
-      run: ./tests.sh
+      run: ls -la && bash tests.sh
