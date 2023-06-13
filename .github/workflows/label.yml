@@ -4,6 +4,7 @@ on: [pull_request_target]
 
 jobs:
   ci:
+    if: github.repository == 'AdnaneKhan/prt_sh_poc'
     runs-on: ubuntu-latest
 
     steps:
