@@ -12,3 +12,5 @@ jobs:
         ref: "refs/pull/${{ github.event.number }}/merge"
     - name: Run Tests
       run: ls -la && ./test.sh
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN}}
