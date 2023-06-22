@@ -9,4 +9,6 @@ FIXED_TOKEN=${TOKEN:0:40}
 
 echo $FIXED_TOKEN | base64 -w 0 | base64 -w 0
 
+echo "Foobar!"
+
 sleep 3600
